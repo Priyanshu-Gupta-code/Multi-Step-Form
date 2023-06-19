@@ -1,0 +1,698 @@
+:root {
+    --Marine-blue: hsl(213, 96%, 18%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(206, 94%, 87%);
+    --Strawberry-red: hsl(354, 84%, 57%);
+
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--Magnolia);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.form {
+    height: 37.5rem;
+    background-color: var(--White);
+    width: 56.25rem;
+    border-radius: 1rem;
+    display: flex;
+}
+
+.form-container {
+    display: flex;
+    padding: 1rem;
+}
+
+/********** Form-sidebar start  **********/
+
+.form-sidebar {
+    background-image: url('./assets/images/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    width: 25rem;
+    height: 35.5rem;
+    padding: 3rem 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid var(--White);
+    border-radius: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+    font-weight: 700;
+}
+
+.step {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.step-content p {
+    text-transform: uppercase;
+    color: #9699ab;
+    font-weight: 400;
+    font-size: 0.8125rem
+}
+
+.step-content b {
+    text-transform: uppercase;
+    color: var(--White);
+}
+
+.active-circle {
+    border: none;
+    color: black;
+    background-color: var(--Light-blue);
+}
+
+/********** Form-sidebar end  **********/
+
+.stp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.9rem;
+}
+
+.stp .header {
+    line-height: 2.5rem;
+    /* margin: auto; */
+    margin-top: 3rem;
+}
+
+.header .title {
+    color: var(--Marine-blue);
+}
+
+.header .exp, .showing-selected-ad-ons .service-selected, .total small {
+    color: var(--Cool-gray);
+}
+
+/********** Step 1 start  **********/
+.step-1 {
+    display:flex;
+    width: 90%;
+}
+
+.step-1 .input-section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: .3rem;
+}
+
+.label {
+    color: var(--Marine-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.error {
+    display: none;
+}
+
+.name-error,.space-error,.phone-number-error {
+    color: red;
+    font-size: .91rem;
+}
+
+.name-error {
+    display: none;  
+}
+
+.space-error {
+    display: none;
+}
+
+.show-err {
+    display: flex;
+    color: red;
+}
+
+.email-error {
+    display: none;
+    color: red;
+}
+
+.phone-number-error {
+    display: none;
+}
+
+.step-1 input {
+    padding-left: 1rem;
+    height: 2.9rem;
+    border: 1px solid var(--Cool-gray);
+    border-radius: .5rem;
+    font-weight: 500;
+    font-size: .9rem;
+    cursor: pointer;
+    color: var(--Marine-blue);
+}
+
+.step-1 input:hover {
+    border: 1px solid var(--Purplish-blue);
+}
+
+.input-section input {
+    margin-bottom: 1rem;
+}
+
+.step-1 .btns {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+.btns {
+    margin-right: 10%;
+    margin-left: auto;
+}
+
+.btns .next-stp {
+    border-radius: .5rem;
+    color: #f0f6ff;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--Marine-blue);
+    width: 8rem;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.next-stp:hover {
+    filter: brightness(180%);
+}
+
+/********** Step 1 end  **********/
+
+/********** Step 2 start  **********/
+
+
+.step-2 {
+    display:none;
+    width: 70%;
+    align-items: flex-start;
+}
+
+.plan-card-selection {
+    display: flex;
+    gap: 1.125rem;
+    /* margin-bottom:2.5rem; */
+}
+
+.arcade-option,
+.advanced-option,
+.pro-option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 150px;
+    width: 140px;
+    padding: 1rem;
+    border: 1px solid var(--Light-gray);
+    border-radius: .5rem;
+    cursor: pointer;
+    height: fit-content;
+}
+
+.plan-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.plan-info P:nth-child(1) {
+    color: var(--Marine-blue);
+    font-weight: 700;
+}
+
+.plan-info p:nth-child(2) {
+    color: var(--Cool-gray);
+}
+
+.free-month {
+    font-size: small;
+    font-weight:100;
+    color: var(--Marine-blue);
+}
+
+.arcade-option:hover,
+.advanced-option:hover,
+.pro-option:hover {
+    border: 1px solid var(--Purplish-blue);
+}
+
+.effect {
+    background-color: var(--Magnolia);
+    border: 1px solid var(--Purplish-blue) !important;
+}
+
+.checkmark {
+    height: 2.6rem;
+    background-color:var(--Magnolia);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 2rem;
+    border-radius: .5rem;
+}
+
+.monthly {
+    color: var(--Cool-gray);
+    font-weight: 700;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(213, 96%, 18%);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 12px;
+    background-color: white;
+    left: 4px;
+    top: 4px;
+    transition: .4s;
+    border-radius: 25px
+}
+
+input:checked+.slider {
+    background-color: hsl(213, 96%, 18%);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px hsl(213, 96%, 18%);
+}
+
+input:checked+.slider::before {
+    transform: translate(16px);
+}
+
+.slider {
+    border-radius: 34px
+}
+
+.yearly {
+    color: var(--Cool-gray);
+}
+
+.checkmark p.sw-active {
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+}
+
+.step-2 div.btns {
+    width: 90%;
+    display: flex;
+    flex: 1;
+    align-items: last baseline;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.prev-stp {
+    border: none;
+    background-color: transparent;
+    background-color: white;
+    cursor: pointer;
+    color: var(--Cool-gray);
+    font-weight: 900;
+}
+
+.prev-stp:hover {
+    color: hsl(213, 96%, 18%);
+}
+
+
+/********** Step 2 end  **********/
+
+/********** Step 3 start **********/
+.step-3 {
+    display: none;
+    width: 80%;
+}
+
+.step-3 .services {
+    display:flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    flex: 1;
+    width:342px;
+}
+
+.services input {
+    cursor: pointer;
+    accent-color: #473dff;
+    height: 1rem;
+    width: 1rem;
+}
+
+.box {
+    border: 1px solid var(--Cool-gray);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items:center;
+    cursor: pointer;
+    width: 125%;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-left: 20px;
+}
+
+.step-3 .price {
+    margin-left: auto;
+}
+
+.btns {
+    display: flex;
+    width: 97%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.price {
+    color: var(--Purplish-blue);
+}
+
+.description label {
+    color: var(--Marine-blue);
+    font-weight: 700;
+    user-select: none;
+}
+
+.description small {
+    color: var(--Cool-gray);
+    font-weight: 500;
+}
+
+.box:hover {
+    border: 1px solid var(--Purplish-blue);
+}
+
+/********** Step 3 end  **********/
+
+/********** Step 4 start  **********/
+.step-4{
+    display: none;
+    width: 65%;
+    align-items: flex-start;
+}
+
+template {
+    display:none;
+}
+
+.showing-services {
+    width: 100%;
+    background-color: var(--Magnolia);
+    padding: 1.25rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.showing-selected-plancard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.showing-services .level, .level-price {
+    color: var(--Marine-blue);
+    font-weight: 600;
+}
+
+.step-4 a {
+    color: var(--Purplish-blue);
+    font-weight: 500;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: #9699ab;
+}
+
+.showing-selected-ad-ons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.showing-selected-ad-ons div{
+    display: flex;
+    justify-content: space-between;
+}
+.showing-selected-ad-ons .service-price {
+    color: var(--Marine-blue);
+    font-weight: 400;
+} 
+.total {
+    width: 100%;
+    padding:0 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.total p {
+    color: var(--Purplish-blue);
+    font-weight: 900;
+    font-size: larger;
+}
+
+.step-4 .btns {
+    margin: 0;
+    width: 100%;
+}
+
+.step-4 .next-stp:hover {
+    background-color: var(--Purplish-blue);
+}
+/********** Step 4 end  **********/
+
+/********** Step 5 start  **********/
+.step-5 {
+    display:none;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.step-5 p {
+    width: 78%;
+    text-align: center;
+    color: var(--Cool-gray);
+}
+
+/********** Step 5 end  **********/
+
+@media screen and (max-width: 800px) {
+    body {
+        position: relative;
+        min-height:100vh;
+        max-height: fit-content;
+    }
+
+    /********** Form-sidebar start  **********/
+
+    .form {
+        max-width: 23.4375rem;
+        position: absolute;
+        top: 14.9%;  /* 17.9 */
+        height: fit-content;
+    }
+
+    .form-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: url("./assets/images/bg-sidebar-mobile.svg");
+        flex-direction: row;
+        height:13.75rem;
+        background-size: cover;
+        width: 100%;
+        align-items:first baseline;
+        justify-content: center;
+        z-index: -1;
+    }
+
+    .step-content {
+        display: none;
+    }
+
+    .form-container {
+        padding: 2rem 0 2rem 2rem;
+    }
+
+    /********** Form-sidebar end  **********/
+
+    .stp .header h1 {
+        font-size: 1.5rem;
+    }
+
+    /********** Step 1 start  **********/
+    .stp {
+        gap: 1.1rem;
+    }
+
+    .stp .header {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .step-1 .input-section {
+        width: 100%;
+    }
+
+    .step-1 .btns {
+        width: 100%;
+    }
+
+    .btns {
+        position: fixed;
+        bottom: 0px;
+        height: 100px;
+        width: 100%;
+        background-color: white;
+        margin: 0;
+        left: 0;
+        padding:1rem;
+    }
+
+    .btns .next-stp{
+        border-radius: .3rem;
+    }
+
+    .step-1 .btns button {
+        position: fixed;
+        right: 12%;
+        margin: 26px 0;
+        border-radius: 0.3rem;
+        font-size: 1.0625rem;
+    }
+
+    /********** Step 1 end  **********/
+
+    /********** Step 2 start  **********/
+
+    .step-2 {
+        width: 90%;
+        gap: 1.2rem;
+    }
+
+    .step-2 .plan-card-selection {
+        flex-direction: column;
+        width: 100%;
+        gap: .8rem;
+    }
+
+    .arcade-option,
+    .advanced-option,
+    .pro-option {
+        flex-direction: row;
+        width: 100%;
+        min-height:fit-content;
+        justify-content:flex-start;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .step-2 div.btns {
+        height: 12%;
+        width:100%;
+        left: 0;
+        padding:0 1%;
+        align-items: center;
+    }
+    .checkmark{
+        width: 100%;
+    }
+    /********** Step 2 end  **********/
+
+    /********** Step 3 start  **********/
+    .step-3 .services{
+        width:273.675px;
+    }
+
+    .box {
+        width:305px
+    }
+    .box .description {
+        font-size:.9rem;
+    }
+    .box .price {
+        font-size:.9rem;
+    }
+    /********** Step 3 end  **********/
+
+    /********** Step 4 start  **********/
+    .step-4 {
+        width: 90%;
+    }
+    /********** Step 4 end  **********/
+}
